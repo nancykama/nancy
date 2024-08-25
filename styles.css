@@ -2,14 +2,14 @@
 
 .header1 {
   padding: 80px; /* some padding */
-  text-align: left; /* center the text */
-  background: #EFEAE7; /* green background */
-  color: black; /* white text color */
+  text-align: left;
+  background: #EFEAE7;
+  color: black;
 }
 
 .header2 {
   padding: 80px; /* some padding */
-  text-align: right; /* center the text */
-  background: #EFEAE7; /* green background */
-  color: black; /* white text color */
+  text-align: right;
+  background: #EFEAE7;
+  color: black;
 }
