@@ -34,10 +34,10 @@
         <li><a href="about.html"> ABOUT </a> </li>  
         <li><a href="index.html"> HOME </a> </li>      
     </nav>
-  
-    <footer id="footer" style="display: none; position: fixed; bottom: 0; left: 0; width: 100%; background-color: #CFE0F2; padding: 10px; text-align: center; box-shadow: 0 -2px 5px rgba(0,0,0,0.1); font-family: 'Gothic A1', sans-serif; color: #4B3B30; transition: transform 0.3s ease-in-out;">
-        <p style="margin: 5px 0;">Contact Me: <a href="mailto:nancy.kama24@gmail.com" style="color: #4B3B30; text-decoration: none;">nancy.kama24@gmail.com</a></p>
-        <p style="font-size: 0.8em; margin: 5px 0;">est. 2024</p>
+
+    <footer>
+        <p>Contact Me: <a href="mailto:nancy.kama24@gmail.com" style="color: #4B3B30; text-decoration: none;">nancy.kama24@gmail.com</a></p>
+        <p class="established">est. 2024</p>
     </footer>
 
     <style>
@@ -82,23 +82,30 @@
             background-color: #CFE0F2; /* Hover background color */
         }
 
-        
+        footer {
+            background-color: #CFE0F2;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+            font-family: 'Gothic A1', sans-serif;
+            color: #4B3B30;
+            margin-top: auto; /* Push the footer to the bottom of the page */
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        .established {
+            font-size: 0.8em; /* Smaller text size for est. 2024 */
+        }
+
+
 
 
      </style>
 
 <script src = "js/main.js"></script>
-
-<script>
-    window.addEventListener('scroll', function() {
-        const footer = document.getElementById('footer');
-        if (window.scrollY > 200) { // Adjust this value as needed
-            footer.style.display = 'block'; // Show footer
-        } else {
-            footer.style.display = 'none'; // Hide footer
-        }
-    });
-</script>
     
 </body>
 </html>
