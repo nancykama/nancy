@@ -1,0 +1,39 @@
+ 
+        nav {
+            list-style-type: none;
+            font-family: Roboto;
+            margin: 0;
+            padding: 0;
+            background-color: #F0F0EE;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            left: 0;
+          }
+          
+          img {
+              float: left;
+              width: 250px;
+              height: 40px;
+          }
+           
+          li {
+            float: right;
+          }
+          
+          li a {
+            display: block;
+            color: #4B3B30;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+          }
+          
+          li a:hover:not(.active) {
+            background-color: #CFE0F2;
+          }
+          
+          .active {
+            background-color: #F0F0EE;
+          }
