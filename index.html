@@ -41,7 +41,50 @@
     </footer>
 
     <style>
+        body {
+            font-family: 'Roboto', sans-serif; /* Main font */
+            margin: 0; /* Remove default margin */
+            background-color: #F0F0EE; /* Set background color */
+        }
+
+        nav {
+            list-style-type: none; /* No bullet points */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            background-color: #F0F0EE; /* Background color of nav */
+            overflow: hidden; /* Clear floats */
+            position: fixed; /* Fixed position */
+            top: 0; /* Stick to top */
+            width: 100%; /* Full width */
+            left: 0; /* Align to left */
+            z-index: 1000; /* Ensure it's above other content */
+        }
         
+        img {
+            float: left; /* Align image to the left */
+            width: 250px; /* Set image width */
+            height: 40px; /* Set image height */
+        }
+        
+        li {
+            float: right; /* Align list items to the right */
+        }
+        
+        li a {
+            display: block; /* Block display for links */
+            color: #4B3B30; /* Link color */
+            text-align: center; /* Center align text */
+            padding: 14px 16px; /* Padding for links */
+            text-decoration: none; /* Remove underline */
+        }
+
+        li a:hover:not(.active) {
+            background-color: #CFE0F2; /* Hover background color */
+        }
+
+        
+
+
      </style>
 
 <script src = "js/main.js"></script>
