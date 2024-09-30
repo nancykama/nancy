@@ -21,19 +21,23 @@
 
     <link rel = "stylesheet" href = "css/style.css"> 
 
-    <link rel="shortcut icon" href="Images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/Users/nancykama/Desktop/MyWebServer/favicon.png" type="image/x-icon">
 </head>
 <body>
 
     <nav class="navbar">
         
-        <img src="Images/logo.png" alt="Logo">
+        <img src="/Users/nancykama/Desktop/MyWebServer/logo.png" alt="Logo">
 
         <li><a href="projects.html"> PROJECTS </a> </li> 
         <li><a href="research.html"> RESEARCH </a> </li> 
         <li><a href="about.html"> ABOUT </a> </li>  
         <li><a href="index.html"> HOME </a> </li>      
     </nav>
+
+    <div class="main-image">
+        <img src = "/Users/nancykama/Desktop/MyWebServer/HOME (1) (2).png" alt = "main">
+    </div>
 
     <footer>
         <p>Contact Me: <a href="mailto:nancy.kama24@gmail.com" style="color: #4B3B30; text-decoration: none;">nancy.kama24@gmail.com</a></p>
@@ -80,6 +84,17 @@
 
         li a:hover:not(.active) {
             background-color: #CFE0F2; /* Hover background color */
+        }
+
+        .main-image {
+            text-align: center; /* Center align the image */
+            margin-top: 60px; /* Space from the top (to avoid nav overlap) */
+        }
+
+        .main-image img {
+            max-width: 100%; /* Make the image responsive */
+            height: auto; /* Maintain aspect ratio */
+            width: 80%; /* Set to 80% of the container width */
         }
 
         footer {
