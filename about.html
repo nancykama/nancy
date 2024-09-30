@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"> <!-- Link to your CSS file -->
+    <style>
+        body {
+            margin: 0; /* Remove default margin */
+            background-color: #F0F0EE; /* Background color */
+            font-family: 'Roboto', sans-serif; /* Default font for body */
+            color: #4B3B30; /* Dark brown color for text */
+            display: flex; /* Use flexbox to center content */
+            flex-direction: column; /* Column layout */
+            align-items: center; /* Center items horizontally */
+            justify-content: center; /* Center items vertically */
+            height: 100vh; /* Full viewport height */
+        }
+
+        h1 {
+            font-family: 'Roboto', sans-serif; /* Heading font */
+            font-size: 2.5em; /* Size of the heading */
+            margin-bottom: 20px; /* Space below the heading */
+            text-align: center; /* Center the heading */
+        }
+
+        p {
+            font-family: 'Gothic A1', sans-serif; /* Paragraph font */
+            font-size: 1.2em; /* Size of the paragraph text */
+            max-width: 600px; /* Max width for aesthetics */
+            text-align: center; /* Center the text */
+            line-height: 1.5; /* Line height for readability */
+        }
+
+        nav {
+            list-style-type: none; /* No bullet points */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            background-color: #F0F0EE; /* Background color of nav */
+            overflow: hidden; /* Clear floats */
+            position: fixed; /* Fixed position */
+            top: 0; /* Stick to top */
+            width: 100%; /* Full width */
+            left: 0; /* Align to left */
+            z-index: 1000; /* Ensure it's above other content */
+        }
+
+        nav img {
+            float: left; /* Align image to the left */
+            width: 250px; /* Set image width */
+            height: 40px; /* Set image height */
+        }
+
+        nav li {
+            float: right; /* Align list items to the right */
+        }
+
+        nav li a {
+            display: block; /* Block display for links */
+            color: #4B3B30; /* Link color */
+            text-align: center; /* Center align text */
+            padding: 14px 16px; /* Padding for links */
+            text-decoration: none; /* Remove underline */
+        }
+
+        nav li a:hover:not(.active) {
+            background-color: #CFE0F2; /* Hover background color */
+        }
+        
+        footer {
+            position: fixed; /* Fixed position */
+            bottom: 0; /* Stick to the bottom */
+            left: 0; /* Align to the left */
+            width: 100%; /* Full width */
+            background-color: #CFE0F2; /* Background color */
+            padding: 10px; /* Padding */
+            text-align: center; /* Center text */
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* Optional shadow */
+            font-family: 'Gothic A1', sans-serif; /* Font for footer */
+            color: #4B3B30; /* Dark brown color */
+        }
+
+        footer p {
+            margin: 10px 0; /* Spacing between paragraphs */
+        }
+
+        .established {
+            font-size: 0.6em; /* Smaller text size for est. 2024 */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <img src="/Users/nancykama/Desktop/logo.png" alt="Logo">
+        <li><a href="projects.html"> PROJECTS </a></li>
+        <li><a href="research.html"> RESEARCH </a></li>
+        <li><a href="about.html"> ABOUT </a></li>
+        <li><a href="index.html"> HOME </a></li>
+    </nav>
+
+    <h1>About Me</h1>
+    <p>Hi, I’m Nancy. This website commemorates the start of my 20s. As I walk into the next decade of my life, I want a place to document what I create, learn, and accomplish. This next chapter is about exploration - of the world and myself. In 10 years I hope to look back through this and see that I’ve grown into someone who makes an impact. 
+    </p>
+
+    <footer>
+        <p>Contact Me: <a href="mailto:nancy.kama24@gmail.com" style="color: #4B3B30; text-decoration: none;">nancy.kama24@gmail.com</a></p>
+        <p class="established">est. 2024</p>
+    </footer>
+</body>
+</html>
