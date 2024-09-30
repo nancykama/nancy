@@ -41,30 +41,29 @@ nav {
           background-color: #F0F0EE;
         }
 
-.footer {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed position */
-  bottom: 0; /* Stick to the bottom */
-  left: 0; /* Align to the left */
-  width: 100%; /* Full width */
-  background-color: #CFE0F2; /* Background color */
-  padding: 10px; /* Padding */
-  text-align: center; /* Center text */
-  box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* Optional shadow */
-  transition: transform 0.3s ease-in-out; /* Smooth transition */
-  font-family: 'Gothic A1', sans-serif; /* Use Gothic A1 font */
-  color: #3D2B1F; /* Dark brown color */
-}
+        footer {
+          display: flex; /* Use flexbox for centering */
+          flex-direction: column; /* Column layout */
+          align-items: center; /* Center items horizontally */
+          justify-content: center; /* Center items vertically */
+          position: fixed; /* Fixed position */
+          bottom: 0; /* Stick to the bottom */
+          left: 0; /* Align to the left */
+          width: 100%; /* Full width */
+          background-color: #CFE0F2; /* Background color */
+          padding: 10px; /* Padding */
+          text-align: center; /* Center text */
+          box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* Optional shadow */
+          font-family: 'Gothic A1', sans-serif; /* Font for footer */
+          color: #4B3B30; /* Dark brown color */
+      }
 
-.footer p {
-  margin: 5px 0; /* Spacing between paragraphs */
-}
+      footer p {
+          margin: 10px 0; /* Spacing between paragraphs */
+      }
 
-.established {
-  font-size: 0.8em; /* Smaller text size for est. 2024 */
-}
+      .established {
+          font-size: 0.6em; /* Smaller text size for est. 2024 */
+      }
 
-.footer.show {
-  display: block; /* Show footer when the class is added */
-}
 
