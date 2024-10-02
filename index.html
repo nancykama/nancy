@@ -32,32 +32,20 @@
 
         nav {
             list-style-type: none;
-            margin: 0;
-            padding: 10px 0; 
+            margin: 0; 
+            padding: 0; 
             background-color: #F0F0EE; 
             overflow: hidden; 
             position: fixed; 
-            top: 0; 
-            justify-content: space-between;
-            align-items: center;
             width: 100%; 
-            display: flex;
-            z-index: 1000; 
-            left: 0;
+            left: 0; 
+            z-index: 1000;
         }
         
-        .logo img {
+        img {
             float: left; 
             width: 250px; 
             height: 40px; 
-        }
-
-        ul {
-            list-style-type: none; /* Remove bullet points */
-            margin: 0; /* Remove default margin */
-            padding: 0; /* Remove default padding */
-            display: flex; /* Use flexbox for horizontal alignment */
-            align-items: center; /* Center items vertically */
         }
         
         li {
@@ -90,22 +78,23 @@
         }
 
         footer {
+            display: flex; /* Use flexbox for centering */
+            flex-direction: column;
+            justify-content: center; /* Center items vertically */
             position: fixed; 
-            bottom: 0; 
+            bottom: 0;
             left: 0;
             width: 100%; 
             background-color: #CFE0F2; 
-            padding: 20px; 
+            padding: 10px; 
             text-align: center;
             box-shadow: 0 -2px 5px rgba(0,0,0,0.1); 
             font-family: 'Gothic A1', sans-serif; 
             color: #4B3B30;
-            z-index: 10;
         }
 
         footer p {
             margin: 10px 0;
-            text-align: center;
         }
 
         .established {
@@ -121,16 +110,12 @@
 
     <nav class="navbar">
         
-        <div class="logo">
-            <img src="/Users/nancykama/Desktop/MyWebServer/logo.png" alt="Logo">
-        </div>
+        <img src="/Users/nancykama/Desktop/MyWebServer/logo.png" alt="Logo">
 
-        <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="about.html">ABOUT</a></li>    
-            <li><a href="projects.html">PROJECTS</a></li>
-            <li><a href="research.html">RESEARCH</a></li> 
-        </ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>    
+        <li><a href="projects.html">PROJECTS</a></li>
+        <li><a href="research.html">RESEARCH</a></li> 
     </nav>
 
     <div class="main-image">
