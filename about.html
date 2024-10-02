@@ -65,6 +65,14 @@
             height: 40px; 
         }
 
+        nav ul {
+            list-style-type: none; /* Remove bullet points */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            display: flex; /* Use flexbox for horizontal alignment */
+            align-items: center; /* Center items vertically */
+        }
+
         nav li {
             float: right;
             margin: 0 5px; 
@@ -118,10 +126,12 @@
             <img src="/Users/nancykama/Desktop/MyWebServer/logo.png" alt="Logo">
         </div>
 
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="about.html">ABOUT</a></li>    
-        <li><a href="projects.html">PROJECTS</a></li>
-        <li><a href="research.html">RESEARCH</a></li>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>    
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="research.html">RESEARCH</a></li>
+        </ul>
     </nav>
 
     <h1>HI, I'M NANCY.</h1>
