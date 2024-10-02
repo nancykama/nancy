@@ -7,46 +7,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gothic+A1&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="/Users/nancykama/Desktop/MyWebServer/favicon.png" type="image/x-icon">
     
-    <style>
-        html, body {
-            height: 100%; /* Allow body to take full height */
-            margin: 0; /* Remove default margin */
-        }
+    <link rel="stylesheet" href="css/style.css">
 
+    <link rel="shortcut icon" href="/Users/nancykama/Desktop/MyWebServer/favicon.png" type="image/x-icon">
+
+    <style>
         body {
-            display: flex;
-            flex-direction: column; /* Stack items vertically */
+            margin: 0; /* Remove default margin */
             background-color: #F0F0EE; 
             font-family: 'Roboto', sans-serif; 
             color: #4B3B30;
-        }
-
-        nav {
-            list-style-type: none;
-            margin: 0;
-            padding: 10px 0; 
-            background-color: #F0F0EE; 
-            position: fixed; 
-            top: 0; 
-            width: 100%; 
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000; 
-            height: 60px; /* Set a fixed height for the navbar */
-        }
-
-        main {
-            flex: 1; /* Allow main content to expand */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start; /* Align items to the top */
-            padding: 20px; /* Add some padding */
-            margin-top: 60px; /* Add margin equal to the navbar height */
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            height: 100vh;
         }
 
         h1 {
@@ -60,13 +36,63 @@
         p {
             text-align: center; 
             margin-top: 10px;
+            margin-left: auto;
+            margin-right: auto; 
             padding: 0 20px; 
             font-family: 'Gothic A1', sans-serif;
             font-size: 1.2em; 
             max-width: 800px;
+            text-align: center; 
             line-height: 1.5; 
         }
 
+        nav {
+            list-style-type: none;
+            margin: 0;
+            padding: 10px 0; 
+            background-color: #F0F0EE; 
+            overflow: hidden; 
+            position: fixed; 
+            top: 0; 
+            justify-content: space-between;
+            align-items: center;
+            width: 100%; 
+            display: flex;
+            z-index: 1000; 
+            left: 0;
+        }
+
+        .logo img {
+            float: left; 
+            width: 250px; 
+            height: 40px; 
+        }
+
+        nav ul {
+            list-style-type: none; /* Remove bullet points */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            display: flex; /* Use flexbox for horizontal alignment */
+            align-items: center; /* Center items vertically */
+        }
+
+        nav li {
+            float: right;
+            margin: 0 5px; 
+        }
+
+        nav li a {
+            display: block;
+            color: #4B3B30;
+            text-align: center;
+            padding: 8px 10px; 
+            text-decoration: none;
+        }
+
+        nav li a:hover:not(.active) {
+            background-color: #CFE0F2; /* Hover background color */
+        }
+        
         footer {
             position: fixed; 
             bottom: 0; 
@@ -78,13 +104,19 @@
             box-shadow: 0 -2px 5px rgba(0,0,0,0.1); 
             font-family: 'Gothic A1', sans-serif; 
             color: #4B3B30;
+            transition: transform 0.3s ease-in-out; /* Smooth transition */
             z-index: 10;
         }
 
         footer p {
             margin: 10px 0;
             display: block;
+            width: 100%; /* Ensure it takes the full width */
             text-align: center; /* Center-align text */
+        }
+
+        footer.active {
+            transform: translateY(0); /* Show footer when active */
         }
 
         .established {
@@ -108,17 +140,32 @@
         </ul>
     </nav>
 
-    <main>
-        <h1>HI, I'M NANCY.</h1>
-        <p>This website commemorates the start of my 20s. As I walk into the next decade of my life, I want a place to document what I create, learn, and accomplish. This next chapter is about exploration - of the world and myself. In 10 years I hope to look back through this and see that I’ve grown into someone who makes an impact. 
-        </p>
-    </main>
+    <h1>HI, I'M NANCY.</h1>
+    <p>This website commemorates the start of my 20s. As I walk into the next decade of my life, I want a place to document what I create, learn, and accomplish. This next chapter is about exploration - of the world and myself. In 10 years I hope to look back through this and see that I’ve grown into someone who makes an impact. 
+    </p>
 
     <footer id="footer">
         <p>Contact Me: <a href="mailto:nancy.kama24@gmail.com" style="color: #4B3B30; text-decoration: none;">nancy.kama24@gmail.com</a></p>
         <p class="established">est. 2024</p>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src = "js/main.js"></script>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const footer = document.getElementById('footer');
+            const bodyHeight = document.body.offsetHeight;
+            const windowHeight = window.innerHeight;
+            const scrollY = window.scrollY;
+
+            // Check if user scrolled to the bottom
+            if (windowHeight + scrollY >= bodyHeight) {
+                footer.classList.add('active');
+            } else {
+                footer.classList.remove('active');
+         }
+        }); 
+    </script>
+
 </body>
 </html>
