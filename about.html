@@ -44,6 +44,7 @@
         }
 
         nav {
+            list-style-type: none;
             margin: 0;
             padding: 10px 0; 
             background-color: #F0F0EE; 
@@ -58,21 +59,22 @@
             left: 0;
         }
 
-        nav img {
+        .logo img {
             float: left; 
             width: 250px; 
             height: 40px; 
         }
 
         nav li {
-            float: right; 
+            float: right;
+            margin: 0 5px; 
         }
 
         nav li a {
             display: block;
             color: #4B3B30;
             text-align: center;
-            padding: 14px 16px; 
+            padding: 8px 10px; 
             text-decoration: none;
         }
 
@@ -112,7 +114,10 @@
 
 <body>
     <nav class="navbar">
-        <img src="/Users/nancykama/Desktop/MyWebServer/logo.png" alt="Logo">
+        <div class="logo">
+            <img src="/Users/nancykama/Desktop/MyWebServer/logo.png" alt="Logo">
+        </div>
+
         <li><a href="index.html">HOME</a></li>
         <li><a href="about.html">ABOUT</a></li>    
         <li><a href="projects.html">PROJECTS</a></li>
