@@ -82,30 +82,6 @@
             background-color: #CFE0F2; /* Hover background color */
         }
         
-        footer {
-            display: flex; /* Use flexbox for centering */
-            flex-direction: column;
-            justify-content: center; /* Center items vertically */
-            position: fixed; 
-            bottom: 0;
-            left: 0;
-            width: 100%; 
-            background-color: #CFE0F2; 
-            padding: 10px; 
-            text-align: center;
-            box-shadow: 0 -2px 5px rgba(0,0,0,0.1); 
-            font-family: 'Gothic A1', sans-serif; 
-            color: #4B3B30;
-        }
-
-        footer p {
-            margin: 10px 0;
-        }
-
-        .established {
-            margin-top: 5px;
-            font-size: 0.6em; 
-        }
     </style>
 </head>
 
@@ -123,28 +99,8 @@
     <p>This website commemorates the start of my 20s. As I walk into the next decade of my life, I want a place to document what I create, learn, and accomplish. This next chapter is about exploration - of the world and myself. In 10 years I hope to look back through this and see that I’ve grown into someone who makes an impact. 
     </p>
 
-    <footer id="footer">
-        <p>Contact Me: <a href="mailto:nancy.kama24@gmail.com" style="color: #4B3B30; text-decoration: none;">nancy.kama24@gmail.com</a></p>
-        <p class="established">est. 2024</p>
-    </footer>
-
     <script src = "js/main.js"></script>
 
-    <script>
-        window.addEventListener('scroll', function() {
-            const footer = document.getElementById('footer');
-            const bodyHeight = document.body.offsetHeight;
-            const windowHeight = window.innerHeight;
-            const scrollY = window.scrollY;
-
-            // Check if user scrolled to the bottom
-            if (windowHeight + scrollY >= bodyHeight) {
-                footer.classList.add('active');
-            } else {
-                footer.classList.remove('active');
-         }
-        }); 
-    </script>
 
 </body>
 </html>
