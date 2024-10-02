@@ -1,4 +1,4 @@
-window.addEventListener('scroll', function() {
+ window.addEventListener('scroll', function() {
     const footer = document.getElementById('footer');
     const bodyHeight = document.body.offsetHeight;
     const windowHeight = window.innerHeight;
@@ -9,5 +9,5 @@ window.addEventListener('scroll', function() {
         footer.classList.add('active');
     } else {
         footer.classList.remove('active');
-    }
+     }
 });

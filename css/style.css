@@ -2,16 +2,18 @@ body {
   background-color: #F0F0EE; /* Replace with your desired color */
 } 
 
-nav {
-          list-style-type: none;
-          font-family: Roboto;
+        nav {
           margin: 0;
-          padding: 0;
-          background-color: #F0F0EE;
-          overflow: hidden;
-          position: fixed;
-          top: 0;
-          width: 100%;
+          padding: 10px 0; 
+          background-color: #F0F0EE; 
+          overflow: hidden; 
+          position: fixed; 
+          top: 0; 
+          justify-content: space-between;
+          align-items: center;
+          width: 100%; 
+          display: flex;
+          z-index: 1000; 
           left: 0;
         }
         
@@ -52,7 +54,6 @@ nav {
             box-shadow: 0 -2px 5px rgba(0,0,0,0.1); 
             font-family: 'Gothic A1', sans-serif; 
             color: #4B3B30;
-            transform: translateY(100%); /* Hide footer initially */
             transition: transform 0.3s ease-in-out; /* Smooth transition */
             z-index: 10;
         }
