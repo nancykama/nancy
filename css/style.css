@@ -42,28 +42,31 @@ nav {
         }
 
         footer {
-          display: flex; /* Use flexbox for centering */
-          flex-direction: column; /* Column layout */
-          align-items: center; /* Center items horizontally */
-          justify-content: center; /* Center items vertically */
-          position: fixed; /* Fixed position */
-          bottom: 0; /* Stick to the bottom */
-          left: 0; /* Align to the left */
-          width: 100%; /* Full width */
-          background-color: #CFE0F2; /* Background color */
-          padding: 10px; /* Padding */
-          text-align: center; /* Center text */
-          box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* Optional shadow */
-          font-family: 'Gothic A1', sans-serif; /* Font for footer */
-          color: #4B3B30; /* Dark brown color */
-      }
+            position: fixed; 
+            bottom: 0; 
+            left: 0;
+            width: 100%; 
+            background-color: #CFE0F2; 
+            padding: 10px; 
+            text-align: center;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1); 
+            font-family: 'Gothic A1', sans-serif; 
+            color: #4B3B30;
+            transform: translateY(100%); /* Hide footer initially */
+            transition: transform 0.3s ease-in-out; /* Smooth transition */
+        }
 
-      footer p {
-          margin: 10px 0; /* Spacing between paragraphs */
-      }
+        footer p {
+            margin: 10px 0; /* Spacing between paragraphs */
+        }
 
-      .established {
-          font-size: 0.6em; /* Smaller text size for est. 2024 */
-      }
+        footer.active {
+            transform: translateY(0); /* Show footer when active */
+        }
+
+        .established {
+            margin-top: 5px;
+            font-size: 0.6em; 
+        }
 
 

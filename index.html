@@ -109,19 +109,37 @@
             box-shadow: 0 -2px 5px rgba(0,0,0,0.1); 
             font-family: 'Gothic A1', sans-serif; 
             color: #4B3B30;
+            transform: translateY(100%); /* Hide footer initially */
+            transition: transform 0.3s ease-in-out; /* Smooth transition */
         }
 
         footer p {
             margin: 10px 0; /* Spacing between paragraphs */
         }
 
+        footer.active {
+            transform: translateY(0); /* Show footer when active */
+        }
+
         .established {
+            margin-top: 5px;
             font-size: 0.6em; 
         }
 
      </style>
 
 <script src = "js/main.js"></script>
+
+<script>
+    window.addEventListener('scroll', function() {
+    const footer = document.getElementById('footer');
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+        footer.classList.add('active'); // Add 'active' class when at the bottom
+    } else {
+        footer.classList.remove('active'); // Remove 'active' class otherwise
+    }
+});
+</script>
     
 </body>
 </html>
