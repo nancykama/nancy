@@ -8,9 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gothic+A1&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css"> 
-</head>
 
-<style>
+    <style>
         body {
             margin: 0; /* Remove default margin */
             background-color: #F0F0EE; 
@@ -91,6 +90,7 @@
             color: #4B3B30;
             transform: translateY(100%); /* Hide footer initially */
             transition: transform 0.3s ease-in-out; /* Smooth transition */
+            z-index: 10;
         }
 
         footer p {
@@ -105,20 +105,8 @@
             margin-top: 5px;
             font-size: 0.6em; 
         }
-</style>
-
-<script src = "js/main.js"></script>
-
-<script>
-    window.addEventListener('scroll', function() {
-    const footer = document.getElementById('footer');
-    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-        footer.classList.add('active'); // Add 'active' class when at the bottom
-    } else {
-        footer.classList.remove('active'); // Remove 'active' class otherwise
-    }
-});
-</script>
+    </style>
+</head>
 
 <body>
     <nav class="navbar">
@@ -137,5 +125,24 @@
         <p>Contact Me: <a href="mailto:nancy.kama24@gmail.com" style="color: #4B3B30; text-decoration: none;">nancy.kama24@gmail.com</a></p>
         <p class="established">est. 2024</p>
     </footer>
+
+    <script src = "js/main.js"></script>
+
+<script>
+    window.addEventListener('scroll', function() {
+    const footer = document.getElementById('footer');
+    const bodyHeight = document.body.offsetHeight;
+    const windowHeight = window.innerHeight;
+    const scrollY = window.scrollY;
+
+    // Check if user scrolled to the bottom
+    if (windowHeight + scrollY >= bodyHeight) {
+        footer.classList.add('active');
+    } else {
+        footer.classList.remove('active');
+    }
+});
+</script>
+
 </body>
 </html>

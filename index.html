@@ -22,27 +22,6 @@
     <link rel = "stylesheet" href = "css/style.css"> 
 
     <link rel="shortcut icon" href="/Users/nancykama/Desktop/MyWebServer/favicon.png" type="image/x-icon">
-</head>
-<body>
-
-    <nav class="navbar">
-        
-        <img src="/Users/nancykama/Desktop/MyWebServer/logo.png" alt="Logo">
-
-        <li><a href="projects.html">PROJECTS</a></li>
-        <li><a href="research.html">RESEARCH</a></li>
-        <li><a href="about.html">ABOUT</a></li>
-        <li><a href="index.html">HOME</a></li>     
-    </nav>
-
-    <div class="main-image">
-        <img src = "/Users/nancykama/Desktop/MyWebServer/HOME (1) (2).png" alt = "main">
-    </div>
-
-    <footer>
-        <p>Contact Me: <a href="mailto:nancy.kama24@gmail.com" style="color: #4B3B30; text-decoration: none;">nancy.kama24@gmail.com</a></p>
-        <p class="established">est. 2024</p>
-    </footer>
 
     <style>
         body {
@@ -88,7 +67,7 @@
 
         .main-image {
             text-align: center;
-            margin-txop: 20px; 
+            margin-top: 20px; 
             margin-left: 200px;
         }
 
@@ -111,6 +90,7 @@
             color: #4B3B30;
             transform: translateY(100%); /* Hide footer initially */
             transition: transform 0.3s ease-in-out; /* Smooth transition */
+            z-index: 10;
         }
 
         footer p {
@@ -128,15 +108,44 @@
 
      </style>
 
+</head>
+
+<body>
+
+    <nav class="navbar">
+        
+        <img src="/Users/nancykama/Desktop/MyWebServer/logo.png" alt="Logo">
+
+        <li><a href="projects.html">PROJECTS</a></li>
+        <li><a href="research.html">RESEARCH</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="index.html">HOME</a></li>     
+    </nav>
+
+    <div class="main-image">
+        <img src = "/Users/nancykama/Desktop/MyWebServer/HOME (1) (2).png" alt = "main">
+    </div>
+
+    <footer>
+        <p>Contact Me: <a href="mailto:nancy.kama24@gmail.com" style="color: #4B3B30; text-decoration: none;">nancy.kama24@gmail.com</a></p>
+        <p class="established">est. 2024</p>
+    </footer>
+
+
 <script src = "js/main.js"></script>
 
 <script>
-    window.addEventListener('scroll', function() {
+   window.addEventListener('scroll', function() {
     const footer = document.getElementById('footer');
-    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-        footer.classList.add('active'); // Add 'active' class when at the bottom
+    const bodyHeight = document.body.offsetHeight;
+    const windowHeight = window.innerHeight;
+    const scrollY = window.scrollY;
+
+    // Check if user scrolled to the bottom
+    if (windowHeight + scrollY >= bodyHeight) {
+        footer.classList.add('active');
     } else {
-        footer.classList.remove('active'); // Remove 'active' class otherwise
+        footer.classList.remove('active');
     }
 });
 </script>
